@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="google-site-verification" content="vZI0W1E8itzdDOgV2cS9M5qlhWUIzTRd7AQG7kmki7w">
+  <meta name="theme-color" content="#159fd0">
+  <meta name="description" content="Browse selected products from Smart Deals Uganda. Follow Jumia links to view current prices and availability.">
+  <link rel="canonical" href="https://smartdealsuganda.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Smart Deals Uganda">
+  <meta property="og:title" content="Smart Deals Uganda | Smart Shopping. Better Deals.">
+  <meta property="og:description" content="Browse selected product finds and follow Jumia links for current prices and availability.">
+  <meta property="og:url" content="https://smartdealsuganda.netlify.app/">
+  <meta property="og:image" content="https://smartdealsuganda.netlify.app/assets/smart-deals-logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Smart Deals Uganda | Smart Shopping. Better Deals.">
+  <meta name="twitter:description" content="Browse selected product finds and follow Jumia links for current prices and availability.">
+  <meta name="twitter:image" content="https://smartdealsuganda.netlify.app/assets/smart-deals-logo.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Smart Deals Uganda","alternateName":"Smart Deals Ug","url":"https://smartdealsuganda.netlify.app/","inLanguage":"en-UG"},{"@type":"Organization","name":"Smart Deals Uganda","url":"https://smartdealsuganda.netlify.app/","logo":"https://smartdealsuganda.netlify.app/assets/smart-deals-logo.png"}]}</script>
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="assets/icon-192.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Smart Deals">
+  <link rel="stylesheet" href="styles.css"><title>Smart Deals Uganda</title>
+  <style>
+    footer { text-align: center; }
+    footer .footer-brand, footer .footer-links { justify-content: center; }
+    footer .footer-links { flex-wrap: wrap; }
+    footer > p { margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Smart Deals Uganda home"><img src="assets/smart-deals-logo.png" alt="Smart Deals Uganda logo"><span><b>Smart Deals</b><small>UGANDA · Smart Shopping. Better Deals.</small></span></a>
+    <div class="topbar-actions"><button id="cartBtn" class="button button-outline" aria-label="Open shopping cart">🛒 <span id="cartCount">0</span></button><button id="installBtn" class="button button-outline">Install app</button></div>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow">YOUR ONLINE SHOPPING COMPANION</span><h1>Smart shopping.<br><em>Better deals.</em></h1><p class="discount-message">Find deals &amp; discounts</p><a class="jforce-deals" href="https://jforce.jumia.ug/s/2hVOGZZ" target="_blank" rel="noopener noreferrer">Shop Jumia deals ↗</a><p>Discover useful finds for your home, technology, style and everyday life.</p><a href="#catalogue" class="button button-orange">Explore products <span>→</span></a></div>
+      <div class="hero-art"><div class="orb orb-blue"></div><div class="orb orb-orange"></div><div class="hero-bag">🛍️</div><span class="float-tag tag-one">Good finds</span><span class="float-tag tag-two">Shop smarter</span></div>
+    </section>
+    <section class="trust-strip"><div><strong>🇺🇬</strong><span>Made for shoppers in Uganda</span></div><div><strong>↗</strong><span>Order through retailer links</span></div><div><strong>💬</strong><span>Friendly shopping assistance</span></div></section>
+    <section id="advertisements" class="ad-section hidden" aria-label="Featured advertisements"></section>
+    <section class="section" id="catalogue">
+      <div class="section-heading"><div><span class="eyebrow">FIND YOUR NEXT FAVOURITE</span><h2>Explore products</h2></div><span id="productCount" class="muted"></span></div>
+      <p class="muted">Selected Jumia products only. This is not the full Jumia catalogue.</p>
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products and deals…" aria-label="Search products"><button id="clearSearch" aria-label="Clear search">×</button></label>
+      <div id="categories" class="categories" aria-label="Product categories"></div>
+      <span class="muted">Filter by brand</span>
+      <div id="brands" class="categories" aria-label="Filter by brand" style="margin-top:8px"></div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyState" class="empty hidden"><span>🛍️</span><h3>No products found</h3><p>Try another search or category.</p></div>
+      <div class="section-heading" style="margin-top:32px"><h3>Browse Jumia categories</h3></div>
+      <nav class="categories" aria-label="Browse Jumia categories">
+        <a class="category-chip" href="https://www.jumia.ug/mlp-china-mall/" target="_blank" rel="noopener noreferrer">China Mall ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/phones-tablets/" target="_blank" rel="noopener noreferrer">Phones &amp; Tablets ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/electronics/" target="_blank" rel="noopener noreferrer">Electronics ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/home-office-appliances/" target="_blank" rel="noopener noreferrer">Home &amp; Office Appliances ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/home-office/" target="_blank" rel="noopener noreferrer">Home &amp; Office ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/category-fashion-by-jumia/" target="_blank" rel="noopener noreferrer">Fashion ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/computing/" target="_blank" rel="noopener noreferrer">Computing ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/health-beauty/" target="_blank" rel="noopener noreferrer">Health &amp; Beauty ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/groceries/" target="_blank" rel="noopener noreferrer">Groceries ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/video-games/" target="_blank" rel="noopener noreferrer">Video Games ↗</a>
+        <a class="category-chip" href="https://www.jumia.ug/baby-products/" target="_blank" rel="noopener noreferrer">Baby Products ↗</a>
+      </nav>
+    </section>
+    <section class="section jumia-shops" id="jumia-shops" aria-labelledby="jumia-shops-title">
+      <div class="section-heading"><div><span class="eyebrow">BROWSE TRUSTED SELLER PAGES</span><h2 id="jumia-shops-title">Jumia Shops</h2></div></div>
+      <p class="muted">Explore All Jumia Shops on Discounts</p>
+      <div class="section-heading shop-subheading"><h3>Baby Products</h3></div>
+      <div class="shops-grid">
+        <article class="shop-directory-card"><span class="shop-directory-label">Baby products shop</span><h3>The Collective Baby Shop</h3><p>Browse this seller’s products on Jumia.</p><div class="shop-directory-actions"><a class="button button-outline" href="https://www.jumia.ug/the-collective-baby-shop/" target="_blank" rel="noopener noreferrer">Seller page ↗</a><button class="button button-orange" type="button" data-shop-url="https://www.jumia.ug/the-collective-baby-shop/">Shop ↗</button></div></article>
+        <article class="shop-directory-card"><span class="shop-directory-label">Baby products shop</span><h3>Lebaiqi Store-COD</h3><p>Browse this seller’s products on Jumia.</p><div class="shop-directory-actions"><a class="button button-outline" href="https://www.jumia.ug/lebaiqi-store-cod/" target="_blank" rel="noopener noreferrer">Seller page ↗</a><button class="button button-orange" type="button" data-shop-url="https://www.jumia.ug/lebaiqi-store-cod/">Shop ↗</button></div></article>
+        <article class="shop-directory-card"><span class="shop-directory-label">Baby products shop</span><h3>Simply Divine</h3><p>Browse this seller’s products on Jumia.</p><div class="shop-directory-actions"><a class="button button-outline" href="https://www.jumia.ug/simply-divine/" target="_blank" rel="noopener noreferrer">Seller page ↗</a><button class="button button-orange" type="button" data-shop-url="https://www.jumia.ug/simply-divine/">Shop ↗</button></div></article>
+      </div>
+      <div class="section-heading shop-subheading"><h3>More Shops</h3></div>
+      <div class="shops-grid shops-grid-more">
+        <article class="shop-directory-card"><span class="shop-directory-label">Jumia shop</span><h3>DanSoft Technologies</h3><p>Browse this seller’s products on Jumia.</p><div class="shop-directory-actions"><a class="button button-outline" href="https://www.jumia.ug/dansoft-technologies/" target="_blank" rel="noopener noreferrer">Seller page ↗</a><button class="button button-orange" type="button" data-shop-url="https://www.jumia.ug/dansoft-technologies/">Shop ↗</button></div></article>
+      </div>
+    </section>
+    <section class="help-banner"><div class="help-icon">✦</div><div><h2>Need help finding something?</h2><p>Tell us what you need and we’ll help you find a suitable product.</p></div><a id="whatsappHelp" class="button button-dark" target="_blank" rel="noopener">Ask on WhatsApp ↗</a></section>
+    <section class="how-section"><span class="eyebrow">SHOP WITH CONFIDENCE</span><h2>How it works</h2><div class="steps"><article><span>01</span><h3>Discover</h3><p>Browse products and compare details.</p></article><article><span>02</span><h3>View the deal</h3><p>Open the retailer link to check current price and availability.</p></article><article><span>03</span><h3>Choose how to order</h3><p>Open the product on Jumia or add it to your cart and request checkout help on WhatsApp.</p></article></div></section>
+  </main>
+  <footer>
+    <div class="footer-brand"><img src="assets/smart-deals-logo.png" alt=""><span><b>Smart Deals Uganda</b><small>Smart Shopping. Better Deals.</small></span></div>
+    <p>Browse product and category links directly on Jumia. <a href="https://jforce.jumia.ug/s/2hVOGZZ" target="_blank" rel="noopener noreferrer">Shop all on Jumia with our JForce referral link ↗</a></p>
+    <p>The JForce link above offers great discounts on qualifying purchases. Use our link to enjoy unmatched Black November offers.</p>
+    <p>Independent shopping assistance. Smart Deals Uganda is not an official Jumia website. Prices, stock, checkout, delivery and returns are determined by the retailer.</p>
+    <div class="footer-links">
+      <a href="#catalogue">Browse products</a>
+      <a href="#jumia-shops">Jumia shops</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="tel:+256700321960" aria-label="Call Smart Deals Uganda at +256700321960"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:5px"><path fill="currentColor" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 4.18 2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72c.12.96.34 1.9.65 2.79a2 2 0 0 1-.45 2.11L8 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.31 1.83.53 2.79.65A2 2 0 0 1 22 16.92z"/></svg>FOR DIRECT CALLS ONLY: +256 700 321 960</a>
+      <a href="https://instagram.com/dansoft_technologies" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:5px"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>Instagram ↗</a>
+      <a href="https://www.facebook.com/share/1JynAC9z2K/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:5px"><path fill="currentColor" d="M13.4 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.3V13H10v8h3.4z"/></svg>Facebook ↗</a>
+      <a href="https://www.tiktok.com/@dansoftdechnologies" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:5px"><path fill="currentColor" d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.9V1h-3.9v13.7a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V8a6.8 6.8 0 1 0 6.8 6.8V7.6a8.7 8.7 0 0 0 5.1 1.6V5.4c-.8 0-1.5-.2-2.2-.7z"/></svg>TikTok ↗</a>
+    </div>
+    <small>© <span id="year"></span> Smart Deals Uganda</small>
+  </footer>
+  <dialog id="productDialog" class="modal"><form method="dialog"><button class="modal-close" aria-label="Close">×</button></form><div id="productDetail"></div></dialog>
+  <dialog id="cartDialog" class="modal cart-modal"><form method="dialog"><button class="modal-close" aria-label="Close cart">×</button></form><h2>Your cart</h2><div id="cartItems"></div><p id="cartSummary" class="cart-summary"></p><label class="cart-payment">Payment network<select id="cartPaymentMethod"><option value="Airtel Money">Airtel Money</option><option value="MTN Mobile Money">MTN Mobile Money</option></select></label><div class="payment-form"><label>Full name<input id="paymentName" autocomplete="name" maxlength="100" required placeholder="Your name"></label><label>Email<input id="paymentEmail" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"></label><label>Mobile Money phone<input id="paymentPhone" type="tel" autocomplete="tel" inputmode="tel" maxlength="16" required placeholder="2567XXXXXXXX"></label></div><p id="paymentStatus" class="detail-note" role="status" aria-live="polite"></p><button id="flutterwaveCheckout" class="button button-orange">Pay with Flutterwave</button><button id="verifyPayment" class="button button-outline hidden">Check payment status</button><a id="paidOrderWhatsApp" class="button button-whatsapp hidden" target="_blank" rel="noopener noreferrer">Send paid order details on WhatsApp</a><button id="cartCheckout" class="button button-whatsapp">Continue to WhatsApp</button><p class="detail-note">Flutterwave will request authorization on the selected MTN or Airtel Money line. Do not send money until the amount and merchant details shown by Flutterwave are correct.</p></dialog>
+  <dialog id="chatDialog" class="chat-dialog" aria-labelledby="chatTitle"><header class="chat-header"><div><strong id="chatTitle">SmartDeals Chat Assistant</strong><small>Here to help you shop</small></div><form method="dialog"><button class="chat-close" aria-label="Close chat">×</button></form></header><div id="chatLog" class="chat-log" role="log" aria-live="polite"><div class="chat-message chat-bot"><p>👋 Welcome to <strong>SmartDeals Uganda!</strong> 🛍️<br>Thanks for reaching out.<br>Please send us the product you're interested in or ask us any questions about our products, prices, or delivery.<br>📲 <strong>Call/WhatsApp: 0704 292 913 | 0700321960</strong><br><strong>Smart Shopping. Better Deals.</strong> 💙🧡</p></div></div><div class="chat-prompts"><label for="chatProductSelect">Choose a product for availability or price questions</label><select id="chatProductSelect"><option value="">Choose a product…</option></select><div class="chat-question-buttons"><button type="button" id="askAvailability">Is this product still available?</button><button type="button" id="askPrice">How much is this product?</button><button type="button" id="askDelivery">Do you make deliveries?</button></div></div><form id="chatForm" class="chat-form"><label class="sr-only" for="chatInput">Type your message</label><input id="chatInput" type="text" maxlength="500" autocomplete="off" placeholder="Ask another question…" required><button type="submit" aria-label="Send message to WhatsApp">WhatsApp</button></form><a id="chatWhatsApp" class="chat-whatsapp" href="https://wa.me/256704292913" target="_blank" rel="noopener noreferrer">Open WhatsApp ↗</a></dialog>
+  <button id="chatLauncher" class="chat-launcher" aria-label="Open SmartDeals chat" aria-haspopup="dialog">💬</button>
+  <dialog id="installHelpDialog" class="modal"><form method="dialog"><button class="modal-close" aria-label="Close">×</button></form><h2>Install Smart Deals Uganda</h2><p><strong>Android:</strong> Open this site in Chrome, tap ⋮, then choose <em>Install app</em> or <em>Add to Home screen</em>.</p><p><strong>iPhone:</strong> Open this site in Safari, tap the Share button, choose <em>Add to Home Screen</em>, then tap <em>Add</em>.</p><p><strong>Other browsers:</strong> Open the browser menu and choose <em>Install</em> or <em>Add to Home Screen</em>.</p></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body></html>

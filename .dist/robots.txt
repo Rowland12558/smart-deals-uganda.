@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://smartdealsuganda.netlify.app/sitemap.xml
+Sitemap: https://smartdealsuganda.netlify.app/sitemap.txt

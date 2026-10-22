@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+show_preview_links: false
+
+collections:
+  - name: "catalogue"
+    label: "Ads and products"
+    files:
+      - name: "products"
+        label: "Listings"
+        file: "data/products.json"
+        fields:
+          - label: "Listings"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} · {{fields.category}}"
+            fields:
+              - { label: "Listing ID (unique, no spaces)", name: "id", widget: "string", hint: "Use a short unique ID, for example: red-shoes-1" }
+              - { label: "Listing type", name: "listingType", widget: "select", options: ["product", "shop"], default: "product", required: false, hint: "Choose shop for a Jumia seller storefront link." }
+              - { label: "Ad or product title", name: "name", widget: "string" }
+              - { label: "Brand or seller", name: "brand", widget: "string", required: false }
+              - { label: "Category", name: "category", widget: "select", options: ["Electronics", "Home", "Fashion", "Beauty", "Accessories", "Other"] }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Fallback emoji", name: "emoji", widget: "string", default: "🛍️", required: false }
+              - { label: "Badge (optional)", name: "badge", widget: "string", required: false }
+              - { label: "Listing link", name: "jumiaUrl", widget: "string", hint: "Paste the page visitors should open." }
+              - { label: "Price (UGX)", name: "price", widget: "number", value_type: "float", default: 0, required: false }
+  - name: "advertisements"
+    label: "Advertisements"
+    files:
+      - name: "ads"
+        label: "Homepage ads"
+        file: "data/ads.json"
+        fields:
+          - label: "Ads"
+            name: "ads"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Ad ID (unique, no spaces)", name: "id", widget: "string" }
+              - { label: "Ad title", name: "title", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "text", required: false }
+              - { label: "Ad image", name: "image", widget: "image" }
+              - { label: "Button link", name: "destination", widget: "string", hint: "Full website or WhatsApp link visitors should open." }
+              - { label: "Button text", name: "buttonLabel", widget: "string", default: "Learn more" }
+              - { label: "Show this ad", name: "active", widget: "boolean", default: true }
+      - name: "hot_deals"
+        label: "Hot deals (top of homepage)"
+        file: "data/hot-deals.json"
+        fields:
+          - label: "Deals"
+            name: "deals"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.price}}"
+            fields:
+              - { label: "Product name", name: "name", widget: "string" }
+              - { label: "Price (UGX)", name: "price", widget: "number", value_type: "int", min: 1, hint: "Only enter a price you have confirmed is current." }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Short note", name: "note", widget: "string", required: false }
+              - { label: "Show this deal", name: "active", widget: "boolean", default: true }
+  - name: "site_settings"
+    label: "Site settings"
+    files:
+      - name: "integrations"
+        label: "Chat and analytics"
+        file: "data/integrations.json"
+        fields:
+          - { label: "Airtel Money payment number", name: "airtelMoneyNumber", widget: "string", required: false }
+          - { label: "MTN manual payment number", name: "mtnMoneyNumber", widget: "string", required: false }
+          - { label: "Google Analytics 4 Measurement ID", name: "googleAnalyticsId", widget: "string", required: false, hint: "Starts with G-. Leave blank to keep Analytics off." }
+          - { label: "Meta Pixel ID", name: "metaPixelId", widget: "string", required: false, hint: "Numeric ID from Meta Events Manager. Leave blank to keep the Pixel off." }
+          - { label: "Tawk.to Property ID", name: "tawkPropertyId", widget: "string", required: false }
+          - { label: "Tawk.to Widget ID", name: "tawkWidgetId", widget: "string", required: false, hint: "Leave both Tawk fields blank to keep live chat off." }

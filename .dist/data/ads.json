@@ -1,0 +1,13 @@
+{
+  "ads": [
+    {
+      "id": "slinda-17-pro-max-kids-tablet",
+      "title": "S-LINDA 17 Pro Max Kids’ Tablet",
+      "image": "./assets/slinda-17-pro-max-kids-tablet.png",
+      "destination": "https://wa.me/256704292913?text=Hello%2C%20I%27m%20interested%20in%20the%20S-LINDA%2017%20Pro%20Max%20Kids%27%20Tablet.",
+      "buttonLabel": "Call / WhatsApp",
+      "active": true,
+      "caption": "Powerful. Smart. Kid-Friendly."
+    }
+  ]
+}

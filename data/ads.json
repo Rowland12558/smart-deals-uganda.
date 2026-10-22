@@ -1,0 +1,373 @@
+{
+  "ads": [
+    {
+      "id": "oraimo-easyjuice-mini",
+      "title": "Oraimo EasyJuice Mini",
+      "image": "./assets/ads/oraimo-easyjuice-mini.webp",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Compact juicer for fresh, nutrient-rich juice."
+    },
+    {
+      "id": "smartkettle-quick-boil",
+      "title": "SmartKettle Quick Boil",
+      "image": "./assets/ads/smartkettle-quick-boil.png",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "2000W quick boil with intelligent heat preservation."
+    },
+    {
+      "id": "winning-star-mite-vacuum-01",
+      "title": "Winning Star Mite Vacuum Cleaner",
+      "image": "./assets/ads/winning-star-mite-vacuum-01.png",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "300W mite vacuum cleaner with UV cleaning."
+    },
+    {
+      "id": "winning-star-mite-vacuum-02",
+      "title": "Winning Star Deep Cleaning Technology",
+      "image": "./assets/ads/winning-star-mite-vacuum-02.png",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "UV light, high-frequency tapping and powerful suction."
+    },
+    {
+      "id": "winning-star-uv-mite",
+      "title": "Winning Star UV Mite Cleaner",
+      "image": "./assets/ads/winning-star-uv-mite.png",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Clean bedding and reduce dust and allergens."
+    },
+    {
+      "id": "winning-star-mite-vacuum-box",
+      "title": "Winning Star ST-9520 Mite Vacuum",
+      "image": "./assets/ads/winning-star-mite-vacuum-box.png",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "See the ST-9520 features and included accessories."
+    },
+    {
+      "id": "winning-star-mite-vacuum-hero",
+      "title": "Winning Star 300W Mite Vacuum Cleaner",
+      "image": "./assets/ads/winning-star-mite-vacuum-hero.png",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "A practical clean for your home."
+    },
+    {
+      "id": "oraimo-earbuds",
+      "title": "Oraimo Wireless Earbuds",
+      "image": "./assets/ads/oraimo-earbuds.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Explore Oraimo audio deals on Jumia."
+    },
+    {
+      "id": "couronne-blender",
+      "title": "Couronne 1.5L Blender with Grinder",
+      "image": "./assets/catalog-sample-blender.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Blend and grind with one handy kitchen appliance."
+    },
+    {
+      "id": "biore-uv-aqua-rich",
+      "title": "Biore UV Aqua Rich Watery Essence SPF 50",
+      "image": "./assets/catalog-sample-skincare.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Lightweight daily sun protection for your skin."
+    },
+    {
+      "id": "hisense-32-tv",
+      "title": "Hisense 32 Inch HDR LED TV",
+      "image": "./assets/catalog-jumia-hisense-tv-32.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Enjoy your favourite shows on a 32 inch HDR LED TV."
+    },
+    {
+      "id": "pixel-6l-airfryer",
+      "title": "Pixel 6L Air Fryer",
+      "image": "./assets/catalog-jumia-pixel-airfryer.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Cook family meals with less oil."
+    },
+    {
+      "id": "oraimo-watch-5-lite",
+      "title": "Oraimo Watch 5 Lite Smart Watch",
+      "image": "./assets/catalog-jumia-oraimo-watch-5-lite.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Stay connected with a smart watch on your wrist."
+    },
+    {
+      "id": "nivea-cool-kick-set",
+      "title": "NIVEA Cool Kick Body Care Set",
+      "image": "./assets/catalog-jumia-nivea-cool-kick-set.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Body lotion and spray for a fresh, cool feel."
+    },
+    {
+      "id": "woven-tote-bag",
+      "title": "Woven Straw and Leatherette Tote Bag",
+      "image": "./assets/catalog-jumia-woven-tote.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "A stylish tote bag for everyday use."
+    },
+    {
+      "id": "oraimo-nutrifry-s1-ultra",
+      "title": "Oraimo NutriFry S1 Ultra 6L Air Fryer",
+      "image": "./assets/oraimo-nutrifry-s1-ultra.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "1500W air fryer with app control and a full touchscreen."
+    },
+    {
+      "id": "jumia-samsung-a06",
+      "title": "Samsung Galaxy A06 4GB RAM 64GB",
+      "image": "./assets/catalog-jumia-samsung-a06.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "6.7-inch display, 50MP camera and 5000mAh battery. View current details on Jumia."
+    },
+    {
+      "id": "jumia-samsung-a07",
+      "title": "Samsung Galaxy A07 4G 4GB RAM 64GB",
+      "image": "./assets/catalog-jumia-samsung-a07.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "6.7-inch display, 50MP camera and 5000mAh battery. View current details on Jumia."
+    },
+    {
+      "id": "jumia-redmi-15c",
+      "title": "Xiaomi Redmi 15C 4GB RAM 128GB",
+      "image": "./assets/catalog-jumia-redmi-15c.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Android 15 smartphone with a 6.9-inch display. Check the Jumia page for current details."
+    },
+    {
+      "id": "jumia-pixel-blender",
+      "title": "Pixel 1.5L Blender with Grinder",
+      "image": "./assets/catalog-jumia-pixel-blender.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Two-in-one blender and grinder. View the Jumia page for current product details."
+    },
+    {
+      "id": "jumia-roch-kettle",
+      "title": "Roch 2L Electric Kettle",
+      "image": "./assets/catalog-jumia-roch-kettle.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Fast-boiling 2-litre kettle in silver and black. Check Jumia for current availability."
+    },
+    {
+      "id": "jumia-oraimo-flexicooker",
+      "title": "Oraimo FlexiCooker 2200W Electric Ceramic Hot Plate",
+      "image": "./assets/oraimo-flexicooker.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "2200W ceramic hot plate with dual-ring heating and multiple cooking modes. Check Jumia for current details."
+    },
+    {
+      "id": "jumia-oraimo-multipot-s1-lite",
+      "title": "Oraimo MultiPot S1 Lite 6L Energy-Saving Electric Hotpot",
+      "image": "./assets/oraimo-multipot-s1-lite.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "6L multifunction electric hotpot for boiling, steaming, frying, and grilling. Check Jumia for current details."
+    },
+    {
+      "id": "jumia-oraimo-nutrifry-duo-8l",
+      "title": "Oraimo NutriFry Duo 8L 2800W AirFryer",
+      "image": "./assets/oraimo-nutrifry-duo.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "8L dual-basket air fryer with separate controls and a viewing window."
+    },
+    {
+      "id": "jumia-intelligent-shoe-dryer",
+      "title": "Intelligent Shoe Dryer with 120-Minute Timer",
+      "image": "./assets/dan-soft-shoe-dryer.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Dual shoe dryer with warm-air circulation and a timer."
+    },
+    {
+      "id": "jumia-oraimo-easycut-2",
+      "title": "Oraimo EasyCut 2 10W Quick-Charge Hair Clipper",
+      "image": "./assets/oraimo-easycut-2.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Rechargeable 10W hair clipper with stainless-steel blades and guide combs."
+    },
+    {
+      "id": "jumia-oraimo-smart-clipper-2",
+      "title": "Oraimo Hair Smart Clipper 2 Professional Hair Clipper",
+      "image": "./assets/oraimo-smart-clipper-2.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Professional rechargeable clipper with stainless-steel blades and LED battery display."
+    },
+    {
+      "id": "jumia-oraimo-nimbletype",
+      "title": "Oraimo NimbleType Wireless Keyboard Mouse Kit",
+      "image": "./assets/oraimo-nimbletype-keyboard.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Wireless keyboard and mouse set with a compact keyboard design."
+    },
+    {
+      "id": "jumia-oraimo-slice-power-bank",
+      "title": "Oraimo Slice Link 10000mAh Power Bank with Free Headset",
+      "image": "./assets/oraimo-slice-power-bank.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Portable 10000mAh power bank bundle. Check the listing for current product details."
+    },
+    {
+      "id": "jumia-oraimo-boompop-lite",
+      "title": "Oraimo BoomPop Lite Wireless Headphones",
+      "image": "./assets/oraimo-boompop-lite.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Over-ear wireless headphones with spatial audio and ENC calling."
+    },
+    {
+      "id": "jumia-oraimo-opencirclet-2",
+      "title": "Oraimo OpenCirclet 2 IPX5 Open-Ear Earphones",
+      "image": "./assets/oraimo-opencirclet-2.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Open-ear Bluetooth earphones with step tracking and IPX5 water resistance."
+    },
+    {
+      "id": "jumia-oraimo-smartairfryer-5l",
+      "title": "Oraimo SmartAirFryer 5L 1500W Cooking Visible",
+      "image": "./assets/oraimo-smartairfryer-5l.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "5L air fryer with cooking window, metal interior, and adjustable controls."
+    },
+    {
+      "id": "jumia-oraimo-opensnap-flash-sale",
+      "title": "Oraimo OpenSnap Clip-On Open-Ear Wireless Earbuds",
+      "image": "./assets/oraimo-opensnap-clip-on.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Clip-on open-ear wireless earbuds with Bluetooth 5.4."
+    },
+    {
+      "id": "jumia-oraimo-type-c-halo-headset",
+      "title": "Oraimo Type-C Halo Airy Comfort Headset",
+      "image": "./assets/oraimo-type-c-halo-headset.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Wired Type-C headset with built-in microphone and in-line controls."
+    },
+    {
+      "id": "spj-kettle-steel-eky-ss18l07",
+      "title": "SPJ 1500W Stainless Steel Electric Kettle",
+      "image": "./assets/spj-kettle-steel-eky-ss18l07.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "1500W stainless steel kettle with automatic power cutoff."
+    },
+    {
+      "id": "spj-kettle-steel-eky-ss18l07-box",
+      "title": "SPJ Electric Kettle EKY-SS18L07",
+      "image": "./assets/spj-kettle-steel-eky-ss18l07-box.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Compact design, copper inside wiring and multiple protection system."
+    },
+    {
+      "id": "spj-kettle-black-eky-bl18l08",
+      "title": "SPJ 1500W Black Electric Kettle",
+      "image": "./assets/spj-kettle-black-eky-bl18l08.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Fast-boiling 1500W black kettle with automatic power cutoff."
+    },
+    {
+      "id": "spj-kettle-black-eky-bl18l09",
+      "title": "SPJ 1500W Black Electric Kettle (Textured)",
+      "image": "./assets/spj-kettle-black-eky-bl18l09.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Stylish textured black kettle with multiple protection system."
+    },
+    {
+      "id": "spj-kettle-white-eky-gr18l010",
+      "title": "SPJ 1500W White Electric Kettle",
+      "image": "./assets/spj-kettle-white-eky-gr18l010.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "White 1500W kettle with a handy water-level window."
+    },
+    {
+      "id": "dplight-desk-lamp-fan-dp285",
+      "title": "Dplight Desk Lamp Fan DP-285",
+      "image": "./assets/dplight-desk-lamp-fan-dp285.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Rechargeable desk fan and lamp in one, a new choice for summer."
+    },
+    {
+      "id": "dplight-pen-holder-dual-fan-dp286",
+      "title": "Dplight Desktop Pen Holder Dual Fan DP-286",
+      "image": "./assets/dplight-pen-holder-dual-fan-dp286.jpg",
+      "destination": "https://jforce.jumia.ug/s/2hVOGZZ",
+      "buttonLabel": "Open on Jumia via JForce",
+      "active": true,
+      "caption": "Dual desktop fan with a built-in pen holder."
+    }
+  ]
+}

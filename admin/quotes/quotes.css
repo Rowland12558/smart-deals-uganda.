@@ -1,0 +1,46 @@
+.quotes-page{min-height:100vh;background:var(--paper)}
+.quotes-main{width:min(1180px,calc(100% - 32px));margin:42px auto 70px}
+.quotes-panel{padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+.auth-panel{max-width:490px;margin:10vh auto;text-align:center;padding:38px}
+.auth-panel h1,.quotes-heading h1{margin:10px 0;font-size:clamp(28px,4vw,38px);letter-spacing:-1.2px}
+.auth-panel .detail-note{margin:0 0 20px}
+.quotes-heading{margin-bottom:23px}
+.quotes-heading p{margin:0;color:var(--muted);font-size:14px}
+.quotes-layout{display:grid;grid-template-columns:minmax(310px,.85fr) minmax(0,1.15fr);gap:20px;align-items:start}
+.quote-form h2,.records-panel h2{margin:0 0 19px;font-size:21px}
+.quote-form label{display:grid;gap:7px;margin:0 0 14px;font-size:12px;font-weight:750}
+.quote-form select{width:100%;padding:11px 12px;border:1px solid #dce7ed;border-radius:10px;background:#fff;color:var(--ink)}
+.quote-form input,.quote-form textarea{width:100%;min-width:0;padding:11px 12px;border:1px solid #dce7ed;border-radius:10px;background:#fff;color:var(--ink)}
+.quote-form input:focus,.quote-form textarea:focus{outline:2px solid #149fd044;border-color:var(--blue)}
+.quote-form textarea{resize:vertical}
+.quotes-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.optional{color:var(--muted);font-weight:400}
+.quote-items-heading,.records-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.quote-items-heading{margin:8px 0 12px}
+.quote-items-heading h3{margin:0;font-size:15px}
+.quote-item{display:grid;grid-template-columns:minmax(0,1fr) 72px 112px 34px;gap:8px;align-items:end;margin-bottom:10px}
+.quote-item label{margin:0;font-size:10px}
+.quote-item input{padding:9px 8px}
+.remove-item{height:38px;border:0;border-radius:9px;background:#fff0e9;color:#b54713;font-size:20px;cursor:pointer}
+.quote-total{display:flex;align-items:center;justify-content:space-between;align-self:center;gap:10px;padding:12px 0;color:var(--muted);font-size:12px}
+.quote-total strong{color:var(--ink);font-size:15px}
+.quote-form>.button{width:100%;margin-top:2px}
+.quotes-alert{margin:14px 0;padding:12px 14px;border:1px solid #f1b5a0;border-radius:10px;background:#fff3ee;color:#912e09;font-size:13px}
+.records-heading{align-items:flex-start}
+.records-heading h2{margin:0 0 5px}
+.records-heading p{margin:0}
+.records-heading .button{padding:9px 12px;font-size:12px}
+.records-list{display:grid;gap:12px;margin-top:20px}
+.record-card{padding:16px;border:1px solid var(--line);border-radius:14px}
+.record-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.record-top h3{margin:0 0 5px;font-size:15px;overflow-wrap:anywhere}
+.record-meta{color:var(--muted);font-size:11px;line-height:1.5}
+.record-status{flex:none;padding:5px 9px;border-radius:999px;background:#eaf8fd;color:var(--blue-dark);font-size:10px;font-weight:850;text-transform:uppercase}
+.record-status.invoice{background:#fff0e6;color:#b54713}
+.record-total{margin:12px 0 0;font-weight:850}
+.record-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.record-actions .button{padding:9px 12px;font-size:11px}
+.records-empty{padding:28px 12px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:800px){.quotes-layout{grid-template-columns:1fr}.quotes-heading{margin-bottom:18px}}
+@media(max-width:520px){.quotes-main{margin-top:24px}.quotes-panel{padding:18px}.auth-panel{padding:30px 20px}.quotes-form-row{grid-template-columns:1fr;gap:0}.quote-item{grid-template-columns:minmax(0,1fr) 62px 94px 32px;gap:5px}.quote-item input{font-size:12px}.records-heading{align-items:center}}
+@media print{.topbar,.quotes-main,.quotes-panel{display:none!important}}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#159fd0">
+  <title>Private quotes and invoices · Smart Deals Uganda</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="./quotes.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="quotes-page">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Smart Deals Uganda home">
+      <img src="../../assets/smart-deals-logo.png" alt="">
+      <span><b>Smart Deals</b><small>PRIVATE QUOTES &amp; INVOICES</small></span>
+    </a>
+    <div class="topbar-actions">
+      <a class="button button-outline" href="/admin/">Site editor</a>
+      <button id="logoutButton" class="button button-outline hidden" type="button">Sign out</button>
+    </div>
+  </header>
+  <main class="quotes-main">
+    <section id="authPanel" class="quotes-panel auth-panel">
+      <span class="eyebrow">OWNER ACCESS ONLY</span>
+      <h1>Quotes &amp; invoices</h1>
+      <p id="authMessage" class="detail-note">Sign in with the owner Netlify Identity account to continue.</p>
+      <button id="loginButton" class="button button-orange" type="button">Sign in</button>
+    </section>
+    <div id="accessError" class="quotes-alert hidden" role="alert"></div>
+    <section id="manager" class="hidden">
+      <div class="quotes-heading">
+        <div><span class="eyebrow">PRIVATE BUSINESS TOOLS</span><h1>Quotes &amp; invoices</h1><p>Create a quote to download or convert it to an invoice after the customer confirms.</p></div>
+      </div>
+      <div class="quotes-layout">
+        <form id="quoteForm" class="quotes-panel quote-form">
+          <h2>New quote</h2>
+          <label>Customer name<input name="customerName" maxlength="120" autocomplete="name" required></label>
+          <div class="quotes-form-row">
+            <label>Phone<input name="customerPhone" maxlength="40" autocomplete="tel" required></label>
+            <label>Email <span class="optional">(optional)</span><input name="customerEmail" type="email" maxlength="254" autocomplete="email"></label>
+          </div>
+          <div class="quote-items-heading"><h3>Items</h3><button id="addItemButton" class="text-button" type="button">+ Add item</button></div>
+          <div id="quoteItems" class="quote-items"></div>
+          <div class="quotes-form-row">
+            <label>Delivery fee (UGX)<input name="deliveryFee" type="number" min="0" step="1" value="0" inputmode="numeric"></label>
+            <div class="quote-total"><span>Quote total</span><strong id="formTotal">UGX 0</strong></div>
+          </div>
+          <div class="quotes-form-row">
+            <label>Discount type<select name="discountType"><option value="amount">Amount (UGX)</option><option value="percent">Percent (%)</option></select></label>
+            <label>Discount <span class="optional">(optional)</span><input name="discountValue" type="number" min="0" step="any" value="0" inputmode="decimal"></label>
+          </div>
+          <label>Notes <span class="optional">(optional)</span><textarea name="notes" maxlength="1000" rows="3" placeholder="Validity, delivery details, or other terms"></textarea></label>
+          <p id="formError" class="quotes-alert hidden" role="alert"></p>
+          <button id="saveQuoteButton" class="button button-orange" type="submit">Save quote</button>
+        </form>
+        <section class="quotes-panel records-panel" aria-labelledby="recordsTitle">
+          <div class="records-heading"><div><h2 id="recordsTitle">Saved documents</h2><p class="detail-note">Download a quote or convert a confirmed quote to an invoice.</p></div><button id="refreshButton" class="button button-outline" type="button">Refresh</button></div>
+          <div id="recordsList" class="records-list"><p class="detail-note">Loading private records…</p></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="./quotes.js"></script>
+</body>
+</html>

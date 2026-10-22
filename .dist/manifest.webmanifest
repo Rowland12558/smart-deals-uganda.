@@ -1,0 +1,36 @@
+{
+  "name": "Smart Deals Ug",
+  "short_name": "Smart Deals Ug",
+  "description": "Smart Shopping. Better Deals.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "en-UG",
+  "categories": [
+    "shopping"
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#159fd0",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
