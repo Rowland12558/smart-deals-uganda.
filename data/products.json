@@ -19,7 +19,7 @@
       "price": 0,
       "name": "SPJ 20L Microwave Oven",
       "jumiaUrl": "https://www.jumia.ug/20l-high-tech-microwave-oven-with-manual-knob-controls-silver-black-spj-mpg7255616.html",
-      "id": "Airfryer",
+      "id": "sample-airfryer",
       "image": "./assets/catalog-sample-airfryer.jpg",
       "description": "20-litre microwave with manual knob controls. Check Jumia for current details.",
       "category": "Home",
@@ -32,7 +32,7 @@
       "price": 0,
       "name": "Oraimo SpaceBuds Neo Wireless Earbuds",
       "jumiaUrl": "https://www.jumia.ug/spacebuds-neo-true-bluetooth-spatial-earpods-wireless-charging-black-oraimo-mpg6963579.html",
-      "id": "Headphone",
+      "id": "sample-headphones",
       "image": "./assets/catalog-sample-headphones.jpg",
       "description": "True Bluetooth spatial earbuds with wireless charging. View the Jumia page for details.",
       "category": "Accessories"
