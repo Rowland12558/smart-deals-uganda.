@@ -54,7 +54,11 @@ function validateQuote(body) {
     if (!name || name.length > 160) throw new QuoteInputError('Each item needs a name of 1 to 160 characters.');
     if (!Number.isSafeInteger(quantity) || quantity < 1 || quantity > 99) throw new QuoteInputError('Item quantities must be between 1 and 99.');
     if (!Number.isSafeInteger(unitPrice) || unitPrice < 0) throw new QuoteInputError('Item prices must be whole UGX amounts.');
-    return { name, quantity, unitPrice, lineTotal: quantity * unitPrice };
+    const image = item.image ? String(item.image) : '';
+    if (image && (image.length > 80000 || !/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(image))) {
+      throw new QuoteInputError('Product images must be small JPEG pictures.');
+    }
+    return { name, quantity, unitPrice, lineTotal: quantity * unitPrice, ...(image ? { image } : {}) };
   });
   // Unit prices are VAT-inclusive; the document shows rate = price / 1.18.
   const subtotal = items.reduce((total, item) => total + item.lineTotal, 0);

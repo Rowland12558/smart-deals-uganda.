@@ -39,6 +39,29 @@ async function api(path = '', options = {}) {
   return result;
 }
 
+function shrinkImage(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      const scale = Math.min(1, 400 / Math.max(img.width, img.height));
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.round(img.width * scale));
+      canvas.height = Math.max(1, Math.round(img.height * scale));
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+      let data = canvas.toDataURL('image/jpeg', 0.75);
+      if (data.length > 80000) data = canvas.toDataURL('image/jpeg', 0.5);
+      data.length > 80000 ? reject(new Error('too large')) : resolve(data);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('bad image')); };
+    img.src = url;
+  });
+}
+
 function addItem(item = {}) {
   if (itemsHost.children.length >= 30) return;
   const row = document.createElement('div');
@@ -47,7 +70,29 @@ function addItem(item = {}) {
     <label>Item<input name="itemName" maxlength="160" required value="${escapeHtml(item.name || '')}" placeholder="Product name"></label>
     <label>Qty<input name="quantity" type="number" min="1" max="99" step="1" value="${item.quantity || 1}" required></label>
     <label>Unit price<input name="unitPrice" type="number" min="0" step="1" value="${item.unitPrice || ''}" inputmode="numeric" required placeholder="UGX"></label>
-    <button class="remove-item" type="button" aria-label="Remove item">×</button>`;
+    <button class="remove-item" type="button" aria-label="Remove item">×</button>
+    <div class="item-photo"><img class="item-photo-preview${item.image ? '' : ' hidden'}" alt="" src="${item.image || ''}"><label class="photo-pick">Add product photo (optional)<input name="itemPhoto" type="file" accept="image/*"></label><button class="photo-clear hidden" type="button">Remove photo</button></div>`;
+  row.dataset.image = item.image || '';
+  const preview = row.querySelector('.item-photo-preview');
+  const clearButton = row.querySelector('.photo-clear');
+  row.querySelector('[name="itemPhoto"]').addEventListener('change', async event => {
+    const file = event.target.files[0];
+    if (!file) return;
+    try {
+      row.dataset.image = await shrinkImage(file);
+      preview.src = row.dataset.image;
+      preview.classList.remove('hidden');
+      clearButton.classList.remove('hidden');
+    } catch {
+      alert('That photo could not be used. Choose a JPG or PNG picture.');
+    }
+    event.target.value = '';
+  });
+  clearButton.addEventListener('click', () => {
+    row.dataset.image = '';
+    preview.classList.add('hidden');
+    clearButton.classList.add('hidden');
+  });
   row.addEventListener('input', updateTotal);
   row.querySelector('.remove-item').addEventListener('click', () => {
     row.remove();
@@ -99,7 +144,7 @@ async function loadQuotes() {
 function printDocument(quote) {
   const isInvoice = quote.status === 'invoice';
   const number = isInvoice ? quote.invoiceNumber : quote.quoteNumber;
-  const rows = quote.items.map(item => `<tr><td>${escapeHtml(item.name)}</td><td class="n">${item.quantity}</td><td class="n">${currency(item.unitPrice)}</td><td class="n">${currency(item.unitPrice * item.quantity)}</td></tr>`).join('');
+  const rows = quote.items.map(item => `<tr><td>${escapeHtml(item.name)}${item.image && /^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(item.image) ? `<br><img class="pimg" src="${item.image}" alt="">` : ''}</td><td class="n">${item.quantity}</td><td class="n">${currency(item.unitPrice)}</td><td class="n">${currency(item.unitPrice * item.quantity)}</td></tr>`).join('');
   const discount = quote.discount || 0;
   const discountLabel = quote.discountType === 'percent' && quote.discountValue ? `Discount (${quote.discountValue}%)` : 'Discount';
   const origin = location.origin;
@@ -111,7 +156,7 @@ function printDocument(quote) {
     .brand{display:flex;gap:14px;align-items:center}.brand img{width:78px;height:78px;object-fit:contain}.brand h1{margin:0;color:#0878ad;font-size:24px}.brand .tag{color:#f36b21;font-weight:bold;font-size:12px;margin:2px 0 6px}.contact{font-size:12px;line-height:1.55;color:#40505b}
     .doc{text-align:right}.doc .type{display:inline-block;background:#f36b21;color:#fff;font-weight:bold;letter-spacing:1px;font-size:17px;padding:8px 14px;border-radius:6px}.doc.invoice .type{background:#0878ad}.doc p{margin:8px 0 0;line-height:1.6}
     .bill{margin:22px 0;padding:14px 16px;background:#f6fafc;border-left:4px solid #149fd0;border-radius:4px}.bill small{color:#687783;text-transform:uppercase;letter-spacing:1px;font-size:10px}
-    table{width:100%;border-collapse:collapse}th{background:#149fd0;color:#fff;text-align:left;padding:10px 8px;font-size:12px}td{padding:10px 8px;border-bottom:1px solid #e6edf1}.n{text-align:right}th.n{text-align:right}
+    table{width:100%;border-collapse:collapse}.pimg{display:block;margin-top:6px;max-width:130px;max-height:110px;object-fit:contain;border:1px solid #e6edf1;border-radius:4px}tr{break-inside:avoid}th{background:#149fd0;color:#fff;text-align:left;padding:10px 8px;font-size:12px}td{padding:10px 8px;border-bottom:1px solid #e6edf1}.n{text-align:right}th.n{text-align:right}
     .totals{margin:16px 0 0 auto;width:320px}.totals div{display:flex;justify-content:space-between;padding:6px 8px}.totals .grand{background:#17212b;color:#fff;font-weight:bold;font-size:16px;margin-top:6px;border-radius:5px}
     .block{margin-top:24px;padding:14px 16px;border:1px solid #e6edf1;border-radius:6px;break-inside:avoid}.block h3{margin:0 0 8px;color:#0878ad;font-size:13px;text-transform:uppercase;letter-spacing:.8px}.block p{margin:4px 0;line-height:1.5}.notes{white-space:pre-wrap}
     footer{margin-top:30px;padding:18px;text-align:center;background:linear-gradient(120deg,#149fd0,#0878ad);color:#fff;border-radius:8px;break-inside:avoid}footer strong{display:block;font-size:17px;margin-bottom:5px}footer span{font-size:12px;opacity:.95}
@@ -154,7 +199,8 @@ $('#quoteForm').addEventListener('submit', async event => {
   const items = [...itemsHost.querySelectorAll('.quote-item')].map(row => ({
     name: row.querySelector('[name="itemName"]').value.trim(),
     quantity: Number(row.querySelector('[name="quantity"]').value),
-    unitPrice: Number(row.querySelector('[name="unitPrice"]').value)
+    unitPrice: Number(row.querySelector('[name="unitPrice"]').value),
+    image: row.dataset.image || ''
   }));
   const body = {
     customerName: form.elements.customerName.value.trim(),
