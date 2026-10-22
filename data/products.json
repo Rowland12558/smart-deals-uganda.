@@ -19,10 +19,11 @@
       "price": 0,
       "name": "SPJ 20L Microwave Oven",
       "jumiaUrl": "https://www.jumia.ug/20l-high-tech-microwave-oven-with-manual-knob-controls-silver-black-spj-mpg7255616.html",
-      "id": "sample-airfryer",
+      "id": "Airfryer",
       "image": "./assets/catalog-sample-airfryer.jpg",
       "description": "20-litre microwave with manual knob controls. Check Jumia for current details.",
-      "category": "Home"
+      "category": "Home",
+      "listingType": "product"
     },
     {
       "badge": "",
