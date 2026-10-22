@@ -99,11 +99,7 @@ async function loadQuotes() {
 function printDocument(quote) {
   const isInvoice = quote.status === 'invoice';
   const number = isInvoice ? quote.invoiceNumber : quote.quoteNumber;
-  const VAT = 1.18;
-  const rate = item => Math.round(item.unitPrice / VAT);
-  const rows = quote.items.map(item => `<tr><td>${escapeHtml(item.name)}</td><td class="n">${item.quantity}</td><td class="n">${currency(rate(item))}</td><td class="n">${currency(Math.round(item.unitPrice * item.quantity / VAT))}</td></tr>`).join('');
-  const exVat = quote.items.reduce((sum, item) => sum + Math.round(item.unitPrice * item.quantity / VAT), 0);
-  const vat = quote.subtotal - exVat;
+  const rows = quote.items.map(item => `<tr><td>${escapeHtml(item.name)}</td><td class="n">${item.quantity}</td><td class="n">${currency(item.unitPrice)}</td><td class="n">${currency(item.unitPrice * item.quantity)}</td></tr>`).join('');
   const discount = quote.discount || 0;
   const discountLabel = quote.discountType === 'percent' && quote.discountValue ? `Discount (${quote.discountValue}%)` : 'Discount';
   const origin = location.origin;
@@ -125,10 +121,9 @@ function printDocument(quote) {
       <div class="doc ${isInvoice ? 'invoice' : ''}"><span class="type">${isInvoice ? 'INVOICE' : 'PROFORMA INVOICE'}</span><p><strong>No: ${escapeHtml(number)}</strong><br>Date: ${new Date(isInvoice && quote.convertedAt ? quote.convertedAt : quote.createdAt).toLocaleDateString('en-UG', { year: 'numeric', month: 'long', day: 'numeric' })}${isInvoice ? `<br>Ref. proforma: ${escapeHtml(quote.quoteNumber)}` : ''}</p></div>
     </header>
     <div class="bill"><small>Billed to</small><br><strong>${escapeHtml(quote.customerName)}</strong><br>${escapeHtml(quote.customerPhone)}${quote.customerEmail ? `<br>${escapeHtml(quote.customerEmail)}` : ''}</div>
-    <table><thead><tr><th>Product name</th><th class="n">Qty</th><th class="n">Rate (excl. VAT)</th><th class="n">Amount</th></tr></thead><tbody>${rows}</tbody></table>
+    <table><thead><tr><th>Product name</th><th class="n">Qty</th><th class="n">Rate</th><th class="n">Amount</th></tr></thead><tbody>${rows}</tbody></table>
     <div class="totals">
-      <div><span>Subtotal (excl. VAT)</span><span>${currency(exVat)}</span></div>
-      <div><span>VAT (18%)</span><span>${currency(vat)}</span></div>
+      <div><span>Subtotal</span><span>${currency(quote.subtotal)}</span></div>
       ${discount ? `<div><span>${discountLabel}</span><span>- ${currency(discount)}</span></div>` : ''}
       ${quote.deliveryFee ? `<div><span>Delivery</span><span>${currency(quote.deliveryFee)}</span></div>` : ''}
       <div class="grand"><span>Total (UGX)</span><span>${currency(quote.total)}</span></div>
